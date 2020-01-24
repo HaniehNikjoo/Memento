@@ -8,8 +8,10 @@ import androidx.lifecycle.Observer
 import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.example.myapplication.ui.base.BaseActivity
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class SplashActivity : BaseActivity() {
+
     private val viewModel: SplashViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
