@@ -2,9 +2,10 @@ package com.example.myapplication.prefs
 
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import com.example.myapplication.App
 
 class AppPreferencesManager : PreferencesManager {
-    private var mPrefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(CardServices.context)
+    private var mPrefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(App.instance)
 
     override fun isLogin(): Boolean {
         return mPrefs.getBoolean(PREF_KEY_IS_LOGIN, false)
