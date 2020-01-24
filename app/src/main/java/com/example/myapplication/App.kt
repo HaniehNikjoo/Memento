@@ -1,6 +1,8 @@
 package com.example.myapplication
 
 import android.app.Application
+import com.example.myapplication.di.networkModule
+import com.example.myapplication.di.prefsModule
 import com.example.myapplication.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -21,6 +23,7 @@ open class App : Application() {
         startKoin {
             androidLogger()
             androidContext(this@App)
+            modules(listOf( viewModelModule , networkModule , prefsModule ))
         }
 
     }
