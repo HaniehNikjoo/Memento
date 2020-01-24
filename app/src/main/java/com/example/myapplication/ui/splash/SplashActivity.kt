@@ -1,9 +1,11 @@
 package com.example.myapplication.ui.splash
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
+import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 import com.example.myapplication.ui.base.BaseActivity
 
@@ -35,7 +37,8 @@ class SplashActivity : BaseActivity() {
             Intent(this@SplashActivity, MainActivity::class.java)
         )
         else if(this is SplashState.UserRegistrationActivity) startActivity(
-            Intent(this@SplashActivity, UserRegistrationActivity::class.java)
+            //Todo change to Register
+            Intent(this@SplashActivity, MainActivity::class.java)
         )
         finish()
     }
